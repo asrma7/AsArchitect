@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS Architect</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav id="mainNav" class="topnav">
+            <ul>
+                <li class="logo">
+                    <a href="index.html"><span>AS</span> Architect</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="projects.html">Our Projects</a>
+                </li>
+                <li>
+                    <a href="index.html#team">Team</a>
+                </li>
+                <li>
+                    <a href="#top">Our Services</a>
+                </li>
+                <li class="right">
+                    <a href="index.html#contact">Contact Us</a>
+                </li>
+                <li class="right">
+                    <a href="order.html">Order Service</a>
+                </li>
+                <li class="right">
+                    <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                        <img src="images/hamburgericon.png" height="30" alt="Open Menu Icon">
+                    </a>
+                </li>
+            </ul>
+            <div id="scrollProgress"></div>
+        </nav>
+    </header>
+    <main>
+        <a name="top"></a>
+        <div class="header-pattern">
+            <img src="images/pattern.jpg" alt="Background Image" class="pattern">
+            <h1 class="heading-1">Our Services</h1>
+        </div>
+        <div class="container">
+            <div class="services-heading-wrapper">
+                <div class="services-heading">International Services</div>
+            </div>
+            <br>
+            <div class="services-grid">
+                <a href="#" class="service__card buy">
+                    <div class="card__content">
+                        <div class="service__title">Buy</div>
+                        <div class="service__content">Trusted consultancy finding you exceptional properties worldwide.</div>
+                    </div>
+                </a>
+                <a href="#" class="service__card sell">
+                    <div class="card__content">
+                        <div class="service__title">Sell</div>
+                        <div class="service__content">Unequalled exposure for your luxury residential property.</div>
+                    </div>
+                </a>
+                <a href="#" class="service__card rent">
+                    <div class="card__content">
+                        <div class="service__title">Rent</div>
+                        <div class="service__content">Exceptional rental properties locally & across our international network.</div>
+                    </div>
+                </a>
+                <a class="service__card product-design">
+                    <div class="card__content">
+                        <div class="service__title">Product Design</div>
+                        <div class="service__content">We believe that well-made objects require unwavering attention to detail. Quality work is our passion, and we demonstrate it through our precision machined parts and expert construction.
+                            Every product we produce begs to be seen up close.</div>
+                    </div>
+                </a>
+                <a class="service__card interior">
+                    <div class="card__content">
+                        <div class="service__title">Interior</div>
+                        <div class="service__content">We have passionate professionals offering solutions adapted to the latest trends.</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <a href="#top" class="gotoTop" id="gotoTop"><img src="images/gotoTop.svg" height="30" alt="Up Arrow Icon"></a>
+    <button class="theme" id="theme"><img src="images/gearicon.svg" height="25" alt="Setting Icon for Theme"></button>
+    <footer>
+        <div class="container">
+            <div class="center-text">
+                <div class="logo"><span>AS</span> Architect</div>
+                <span> | &copy; 2020 AS-Architect</span>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/script.js"></script>
+    <script>
+        theme.addEventListener("click", function (){
+            if(document.body.classList.contains("invertBody")){
+                cards = document.getElementsByClassName('card__content');
+                for (index = 0; index < cards.length; index++)
+                {
+                    cards[index].style.backgroundColor = "#000"
+                    cards[index].style.color = "#fff"
+                }
+            }
+            else {
+                cards = document.getElementsByClassName('card__content');
+                for (index = 0; index < cards.length; index++)
+                {
+                    cards[index].style.backgroundColor = "#fff"
+                    cards[index].style.color = "#000"
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
